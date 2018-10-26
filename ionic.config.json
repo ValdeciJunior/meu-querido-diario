@@ -1,0 +1,7 @@
+{
+  "name": "meu-querido-diario/",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
