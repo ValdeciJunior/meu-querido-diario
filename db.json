@@ -1,0 +1,10 @@
+{
+  "users": [
+    { "id": 1, "username": "rolim.valdeci@gmail.com", "password": "123456789" },
+    {"id":2, "username": "raquel@email.com", "password": "123456789"}
+  ],
+  "dias": [
+    { "id": 1, "titulo": "Meu primeiro dia na escola", "conteudo": "O meu primeiro dia na escola foi assim..."
+    , "userId":2 }
+  ]
+}
