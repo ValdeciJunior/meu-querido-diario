@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {FormDiaPage} from '../form-dia/form-dia'
 import {ApiServiceProvider} from '../../providers/api-service/api-service'
 /**
  * Generated class for the DiasPage page.
@@ -23,6 +24,11 @@ export class DiasPage {
     this.apiService.listarDias().subscribe(response =>{
       this.dias = response
     })
+  }
+
+  formDia() {
+    console.log("teste")
+    this.navCtrl.push(FormDiaPage)
   }
 
 }
