@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {ApiServiceProvider} from '../../providers/api-service/api-service';
+import { Pipe, PipeTransform } from '@angular/core'
+import {DiasPage} from '../dias/dias'
+
+@Pipe({
+   name: 'formatDate'
+})
 
 /**
  * Generated class for the FormDiaPage page.
@@ -14,12 +21,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'form-dia.html',
 })
 export class FormDiaPage {
+  dia: any = {titulo:"", conteudo:"", dhc:""}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  private apiService: ApiServiceProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FormDiaPage');
+
+  }
+
+  cadastrar(){
+    this.dia.dhc = this.dia.dhc.split("-").reverse().join("/")
+    this.apiService.cadastrarDia(this.dia).subscribe(response =>{
+      this.navCtrl.push(DiasPage)
+    })
   }
 
 }

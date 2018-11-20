@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {FormDiaPage} from '../form-dia/form-dia'
 import {ApiServiceProvider} from '../../providers/api-service/api-service'
+import {ViewDiaPage} from '../view-dia/view-dia'
 /**
  * Generated class for the DiasPage page.
  *
@@ -27,8 +28,11 @@ export class DiasPage {
   }
 
   formDia() {
-    console.log("teste")
     this.navCtrl.push(FormDiaPage)
+  }
+
+  view(id:number){
+    this.navCtrl.push(ViewDiaPage, {id:id})
   }
 
 }

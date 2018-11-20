@@ -24,4 +24,21 @@ export class ApiServiceProvider {
       `http://localhost:3000/dias`);
   }
 
+  cadastrarDia(dia:any){
+    return this.http.post(
+      `http://localhost:3000/dias`, dia
+    );
+  }
+  getDia(id:number){
+    return this.http.get(
+      `http://localhost:3000/dias/${id}`
+    )
+  }
+
+  excluirDia(id:number){
+    return this.http.delete(
+      `http://localhost:3000/dias/${id}`
+    )
+  }
+
 }

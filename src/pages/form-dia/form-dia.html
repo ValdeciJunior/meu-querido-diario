@@ -14,5 +14,21 @@
 
 
 <ion-content padding>
+  <ion-item>
+    <ion-label stacked>Título</ion-label>
+    <ion-input [(ngModel)]="dia.titulo"  type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Conte como foi seu dia</ion-label>
+    <ion-textarea [(ngModel)]="dia.conteudo"  type="text"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Data</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dia.dhc"></ion-datetime>
+  </ion-item>
+  <button (click)="cadastrar()" ion-button full>Enviar</button>
+
 
 </ion-content>

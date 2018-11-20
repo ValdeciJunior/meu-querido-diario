@@ -7,13 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {User} from '../model/user.model'
+import {FormDiaPage} from '../pages/form-dia/form-dia'
 import {DiasPage} from '../pages/dias/dias'
 import { ApiServiceProvider } from '../providers/api-service/api-service';
+import {ViewDiaPage} from '../pages/view-dia/view-dia'
 
 @NgModule({
   declarations: [
     MyApp,
     DiasPage,
+    FormDiaPage,
+    ViewDiaPage,
     HomePage
   ],
   imports: [
@@ -26,6 +30,8 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
   entryComponents: [
     MyApp,
     DiasPage,
+    FormDiaPage,
+    ViewDiaPage,
     HomePage
   ],
   providers: [
