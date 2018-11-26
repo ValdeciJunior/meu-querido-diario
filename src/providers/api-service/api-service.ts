@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 /*
   Generated class for the ApiServiceProvider provider.
@@ -14,12 +15,12 @@ export class ApiServiceProvider {
     console.log('Hello ApiServiceProvider Provider');
   }
 
-  logar(user: any){
+  logar(user: any):Observable<any[]>{
     return this.http.get(
       `http://localhost:3000/users?username=${user.username}&password=${user.password}`);
   }
 
-  listarDias(){
+  listarDias():Observable<any[]>{
     return this.http.get(
       `http://localhost:3000/dias`);
   }
